@@ -12,10 +12,10 @@ import {
 } from 'react-native';
 import { Avatar, Button, Icon, } from 'react-native-elements';
 
-import { Constants, FileSystem, DocumentPicker, ImagePicker,WebBrowser,Permissions   } from 'expo';
+import { WebBrowser  } from 'expo';
 
 
-const SCREEN_WIDTH = Dimensions.get('window').width;
+
 
 const Files = [
   {
@@ -52,8 +52,7 @@ export default class FilesScreen extends React.Component {
 
 
 download = async (url)  =>{
-console.log('url'+url);
-  WebBrowser.openBrowserAsync(url);
+WebBrowser.openBrowserAsync(url);
 
 }
 
@@ -113,7 +112,7 @@ showComment = () =>{
                   marginHorizontal: 10,
                 }}
               >
-                <TouchableOpacity onPress={this.download}>
+                <TouchableOpacity onPress={()=>this.download(user.url)}>
                 <Icon name="ios-download" type="ionicon" color="gray" size={20} />
                 </TouchableOpacity>
               </View>

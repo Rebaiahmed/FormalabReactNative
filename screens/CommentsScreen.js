@@ -70,12 +70,7 @@ export default class CommentsScreen extends Component {
         {/* Scrollable list */}
         <ScrollView
           ref={(scrollView) => { this._scrollView = scrollView; }}
-          refreshControl={
-            <RefreshControl
-              refreshing={this.state.refreshing}
-              onRefresh={this.onRefresh}
-            />
-          }
+         
         >
           {/* Render each comment with Comment component */}
           {comments.map((comment, index) => <Comment comment={comment} key={index} />)}

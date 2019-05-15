@@ -139,21 +139,7 @@ goFiles =(docname) =>{
                 </TouchableOpacity>
               </View>
 
-              <View
-                style={{
-                  backgroundColor: 'rgba(222,222,222,1)',
-                  width: 35,
-                  height: 28,
-                  borderRadius: 5,
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                  marginHorizontal: 10,
-                }}
-              >
-                <TouchableOpacity onPress={this.showComment}>
-                <Icon name="comment" type="evilicon" color="#f30817" size={20} />
-                </TouchableOpacity>
-              </View>
+             
             </View>
           </View>
           </TouchableOpacity>
@@ -258,7 +244,6 @@ goFiles =(docname) =>{
                     buttonStyle={{
                       height: 33,
                       width: 120,
-                      color :'#f30817',
                       backgroundColor: '#ffffff',
                       borderRadius: 5,
                     }}
